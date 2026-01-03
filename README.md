@@ -77,7 +77,7 @@ The model was trained using
 
 ---
 ## 📁 Project Structure
-
+```txt
 .
 ├── models/           
 ├── notebooks/          # Jupyter notebooks for training
@@ -86,7 +86,7 @@ The model was trained using
 │   └── test/
 ├── app.py              
 └── requirements.txt    # Installation dependencies
-
+```
 ## ⚠️ Disclaimer
 
 *This tool is intended for educational and research purposes only. It is not a certified medical device. All predictions should be verified by a professional radiologist.*
