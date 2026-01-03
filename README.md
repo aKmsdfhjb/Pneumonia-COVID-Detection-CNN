@@ -1,10 +1,6 @@
-A great GitHub **README.md** acts as your project's resume. For a medical AI project, it needs to prove three things: that your code is organized, your science is sound (Recall/Precision), and your app is usable.
 
-Here is a professional template you can copy and paste.
 
----
-
-# 🩻 [Project Name, e.g., PulmoScan AI]
+# 🩻 [Pneumonia-COVID-Detection-CNN]
 
 **A Deep Learning Web Application for Automated Detection of COVID-19 and Pneumonia from Chest X-Rays.**
 
@@ -49,7 +45,7 @@ The model was evaluated using a test set containing balanced samples of all thre
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/PulmoScan-AI.git
+git clone https://github.com/aKmsdfhjb/Pneumonia-COVID-Detection-CNN.git
 cd PulmoScan-AI
 
 ```
@@ -73,7 +69,7 @@ streamlit run app.py
 ## 📂 Dataset
 
 The model was trained using 
-/data_set
+```data_set```
 
 ---
 ## 📁 Project Structure
