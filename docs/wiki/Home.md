@@ -9,7 +9,7 @@ Use the notebooks to inspect the research workflow. Before training, document th
 ## Key repository references
 
 - [Source repository](https://github.com/aKmsdfhjb/Pneumonia-COVID-Detection-CNN)
-- [README](../../README.md)
+- [README](https://github.com/aKmsdfhjb/Pneumonia-COVID-Detection-CNN#readme)
 - [Architecture](Architecture.md)
 
 ## Scope and limitations
