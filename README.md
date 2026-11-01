@@ -1,90 +1,55 @@
+# Pneumonia & COVID-19 Detection CNN — Research Prototype
 
+This repository explores CNN-based classification of chest X-ray images into Normal, Viral Pneumonia and COVID-19 categories.
 
-# 🩻 [Pneumonia-COVID-Detection-CNN]
+![Python](https://img.shields.io/badge/Python-Deep%20Learning-3776AB?style=flat-square&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Research%20Prototype-c34b2e?style=flat-square)
 
-**A Deep Learning Web Application for Automated Detection of COVID-19 and Pneumonia from Chest X-Rays.**
+## Project interface
 
-## 📌 Overview
+[Open the research project page](https://aKmsdfhjb.github.io/Pneumonia-COVID-Detection-CNN/)
 
-This project provides a rapid screening tool for respiratory infections. It utilizes a **Convolutional Neural Network (CNN)** trained on a multi-class dataset to distinguish between **Normal** lungs, **Viral Pneumonia**, and **COVID-19** infections from Posterior-Anterior (PA) chest X-ray images.
+The browser page currently provides project documentation and a local-only image preview. It does not perform inference. A trained model artifact and a validated inference API are not present in the repository yet.
 
-### Key Features
+## Research pipeline
 
-* **Multi-Class Classification:** Specifically tuned to distinguish COVID-19 from standard viral pneumonia.
-* **Interactive Frontend:** Easy-to-use web interface for medical professionals to upload and analyze scans.
-* **High Sensitivity:** Optimized for **Recall** to minimize dangerous False Negatives in a clinical context.
-* **Performance Visualization:** Includes Confusion Matrices and Training Logs for transparency.
+~~~mermaid
+flowchart TD
+ A[Document dataset source and license] --> B[Inspect class balance]
+ B --> C[Patient-level train / validation / test split]
+ C --> D[Preprocess and augment training images]
+ D --> E[Train CNN]
+ E --> F[Validate and tune]
+ F --> G[Evaluate held-out test set]
+ G --> H[Document metrics and limitations]
+ H --> I[Package verified model weights]
+ I --> J[Build and validate inference API]
+ J --> K[Connect browser interface]
+~~~
 
----
+## Current repository contents
 
-## 🏗️ Technical Architecture
+- notebooks/ — model-development material.
+- models/ — currently a placeholder; no deployable trained weights are included.
+- README.md — research overview and reproducibility notes.
+- index.html — static project page and local image preview.
 
-The model is built using a custom **Sequential CNN** architecture with the following layers:
+## Work required before inference can be added
 
-1. **Convolutional Blocks:** Feature extraction with ReLU activation.
-2. **Batch Normalization:** Ensuring stable training across varying X-ray exposures.
-3. **Global Average Pooling:** Reducing parameters and preventing overfitting.
-4. **Softmax Output:** Generating probability scores for all three classes.
+1. Confirm dataset source, usage rights and exact class labels.
+2. Record dataset size and class distribution.
+3. Use patient-level separation to reduce data leakage.
+4. Train and save the model with a documented preprocessing pipeline.
+5. Evaluate on a held-out dataset and report per-class metrics.
+6. Add an inference API and test it against known examples.
+7. Only then connect the frontend to that API.
 
----
+## Evaluation and safety
 
-## 📊 Performance Metrics
+The earlier repository description included performance figures, but the current tracked files do not provide enough reproducible evidence to verify them. Those figures are intentionally not repeated here.
 
-The model was evaluated using a test set containing balanced samples of all three categories.
+This project is educational research only. Chest X-ray classification is a high-stakes medical task. A model output must never be presented as a diagnosis or used to guide treatment. Clinical validation, representative data, external testing and qualified medical oversight would be required for any real-world use.
 
-| Class | Precision | Recall | F1-Score |
-| --- | --- | --- | --- |
-| **Normal** | 0.94 | 0.96 | 0.95 |
-| **Pneumonia** | 0.91 | 0.89 | 0.90 |
-| **COVID-19** | 0.97 | 0.98 | 0.97 |
+## License and data
 
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/aKmsdfhjb/Pneumonia-COVID-Detection-CNN.git
-cd PulmoScan-AI
-
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-
-```
-
-### 3. Run the application
-
-```bash
-streamlit run app.py
-
-```
-
----
-
-## 📂 Dataset
-
-The model was trained using 
-```data_set```
-
----
-## 📁 Project Structure
-```txt
-.
-├── models/           
-├── notebooks/          # Jupyter notebooks for training
-├── dataset/            
-│   ├── train/
-│   └── test/
-├── app.py              
-└── requirements.txt    # Installation dependencies
-```
-## ⚠️ Disclaimer
-
-*This tool is intended for educational and research purposes only. It is not a certified medical device. All predictions should be verified by a professional radiologist.*
-
----
+Check the license and dataset terms for every dataset and model artifact before redistribution. Do not commit private patient data or identifiable medical images.
