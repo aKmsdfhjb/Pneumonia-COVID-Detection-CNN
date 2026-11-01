@@ -62,3 +62,7 @@ Check the license and dataset terms for every dataset and model artifact before 
 
 The repository keeps a version-controlled wiki source under `docs/wiki/`.
 - [Video production brief](docs/video/production-brief.md)
+
+## Publishing the project page
+
+The static page is deployed with `.github/workflows/pages.yml`. A repository administrator must first open **Settings → Pages**, select **GitHub Actions** under Build and deployment, then rerun the deployment workflow. The current repository connection cannot create the Pages site automatically.
