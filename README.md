@@ -53,3 +53,11 @@ This project is educational research only. Chest X-ray classification is a high-
 ## License and data
 
 Check the license and dataset terms for every dataset and model artifact before redistribution. Do not commit private patient data or identifiable medical images.
+
+
+## Project Wiki
+
+- [Wiki home](docs/wiki/Home.md)
+- [Architecture and deployment](docs/wiki/Architecture.md)
+
+The repository keeps a version-controlled wiki source under `docs/wiki/`.
